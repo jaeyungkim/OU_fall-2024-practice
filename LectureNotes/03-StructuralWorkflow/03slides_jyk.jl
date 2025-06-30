@@ -1,13 +1,14 @@
-using CSV, DataFrames, Statistics, GLM
+using CSV, DataFrames, Statistics, GLM, PrettyTables
 
 println("Current working directory: $(pwd())")
 cd(dirname(@__FILE__))
 println("Changed to script directory: $(pwd())")
 
-df = CSV.read("Data/slides3data.csv"; missingstrings=["NA"])
+df = CSV.read("Data/slides3data.csv", DataFrame; missingstrings=["NA"])
 size(df)
 
-describe(df)
+pretty_table(first(df, 12); display_size = (-1, -1))
+show(describe(df), allrows=true)
 
 N = size(df,1)
 β = [1.65,.4,.06,-.0002]
