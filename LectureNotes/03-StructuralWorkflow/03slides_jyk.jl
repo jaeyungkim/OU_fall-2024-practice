@@ -23,9 +23,8 @@ df.lw    = log.(df.wage)
 
 show(describe(df; cols=[:lw, :lwsim]), allrows=true)
 
-## Simulated policy function
-using Plots
 
+## Simulated policy function
 # Parameters for schooling utility
 α0 = 0.5     # intercept
 α1 = 1.0     # parent_college effect
