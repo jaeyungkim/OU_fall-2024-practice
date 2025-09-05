@@ -195,7 +195,7 @@ function multinomial_logit_with_ASC()
     Interpretation:
     - With a negative and insignificant estimate, there is no robust evidence that higher relative wages raise choice probabilities in this specification.
     - Average log wages by alternative (means): alt 1≈2.177, 2≈2.177, 3≈1.856, 4≈1.813, 5≈1.914, 6≈1.569, 7≈1.495, 8 (“Other”)≈1.632. So most alts have higher wages than “Other”.
-    - But by education, the relative advantage changes: for college grads, several nests (e.g., 3,4,6,7) have lower mean wage than “Other”. There’s strong collinearity between (Z_ij-Z_i8) and education/age (e.g., corr(collgrad, w_j-w_s) is large in magnitude and negative for many j). Without alternative-specific constrants (ASCs) and with only one common γ, the wage effect can be masked or flip sign due to these correlations. In short: the negative, insignificant \hat γ looks like a speicification/collinearity artifact, not "people dislike higher wages".
+    - But by education, the relative advantage changes: for college grads, several nests (e.g., 3,4,6,7) have lower mean wage than "Other". There's strong collinearity between (Z_ij-Z_i8) and education/age (e.g., corr(collgrad, w_j-w_s) is large in magnitude and negative for many j). Without alternative-specific constrants (ASCs) and with only one common γ, the wage effect can be masked or flip sign due to these correlations. In short: the negative, insignificant hat γ looks like a speicification/collinearity artifact, not "people dislike higher wages".
     - A one-unit increase in log wage for occupation j (relative to the 
       reference occupation) increases the utility of choosing occupation j by γ
     - The odds ratio interpretation: exp(γ) = $(round(exp(γ_hat), digits=4))
