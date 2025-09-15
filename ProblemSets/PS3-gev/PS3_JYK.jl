@@ -304,11 +304,6 @@ println("  - Economic interpretation: Workers respond to wage differentials")
 println("    when making occupational choices")
 println("="^50)
 
-# Add this function to your existing code (after the multinomial logit function)
-
-
-
-
 """
     nested_logit()
     
@@ -681,7 +676,7 @@ function nested_logit()
         Consider:
         - Using bootstrap for standard errors
         - Simplifying the model specification
-        - Checking for multicollinearity in your data
+        - Checking for multicollinearity in data
         """)
 
         # Set to NaN for return
@@ -1087,7 +1082,7 @@ function nested_logit_improved()
         println("-"^40)
         println("Standard errors could not be reliably computed.")
         println("This is common when:")
-        println("1. λ parameters are at/near boundaries (your case)")
+        println("1. λ parameters are at/near boundaries (this case)")
         println("2. The model is poorly identified")
         println("3. The nesting structure doesn't fit the data")
 
