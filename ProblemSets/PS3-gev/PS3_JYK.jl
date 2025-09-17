@@ -378,9 +378,9 @@ function nested_logit()
         # Ensure dissimilarity parameters are positive (for stability)
         # We'll use exp() transformation in optimization to enforce this
         # But for numerical stability, bound them
-        if λ_WC <= 0.1 || λ_WC >= 10.0 || λ_BC <= 0.1 || λ_BC >= 10.0
-            return -Inf
-        end
+        # if λ_WC <= 0.1 || λ_WC >= 10.0 || λ_BC <= 0.1 || λ_BC >= 10.0
+        #     return -Inf
+        # end
 
         # Initialize log-likelihood
         ll = 0.0
